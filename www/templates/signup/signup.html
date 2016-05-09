@@ -1,0 +1,153 @@
+<ion-view view-title="Sign Up">
+	 
+	<ion-content class="padding">
+
+		<form novalidate name="signUpForm">
+			<div class="list">
+
+				<!--****************** FIRST NAME -->
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">First Name</span>
+					<input type="text" name="firstName" placeholder="Abdul" ng-model="signUpData.firstName" required>
+                    <span style="color:red" ng-show="signUpForm.firstName.$dirty && signUpForm.firstName.$invalid">
+                    <span ng-show="signUpForm.firstName.$error.required">Username is required.</span>
+                    </span>
+				</label>
+
+				<!--****************** LAST NAME -->
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Last Name</span>
+					<input type="text" name="lastName" placeholder="Karim" ng-model="signUpData.lastName" required>
+                    <span style="color:red" ng-show="signUpForm.lastName.$dirty && signUpForm.lastName.$invalid">
+                    <span ng-show="signUpForm.lastName.$error.required">LastName is required.</span>
+                    </span>
+				</label>
+
+				<!--****************** EMAIL -->
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Email</span>
+					<input type="text" placeholder="abul@suhr.com" ng-model="signUpData.email" name="email" required>
+                    <span style="color:red" ng-show="signUpForm.email.$dirty && signUpForm.email.$invalid">
+                    <span ng-show="signUpForm.email.$error.required">Email is required.</span>
+                    </span>
+				</label>
+
+				<!--****************** AGE -->
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Age</span>
+					<input type="text" placeholder="Age" ng-model="signUpData.age" name="age" required>
+                    <span style="color:red" ng-show="signUpForm.age.$dirty && signUpForm.age.$invalid">
+                    <span ng-show="signUpForm.age.$error.required">Age is required.</span>
+                    </span>
+				</label>
+                
+                <!--****************** SCHOOL -->
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">School/College</span>
+					<input type="text" placeholder="Plano Senior" ng-model="signUpData.edu" name="edu" required>
+                    <span style="color:red" ng-show="signUpForm.edu.$dirty && signUpForm.edu.$invalid">
+                    <span ng-show="signUpForm.edu.$error.required">Educational Information is required.</span>
+                    </span>
+				</label>
+
+
+				<!--****************** PASSWORD -->
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Password</span>
+					<input type="password" placeholder="Password" ng-model="signUpData.password" required>
+				</label>
+
+				<!--****************** CONFIRM PASSWORD-->
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Confirm Password</span>
+					<input type="password" placeholder="Password" ng-model="signUpData.confirmPassword" name="confirmPassword" required> 
+				</label>
+
+				<!--****************** GENDER-->
+				<label class="item item-radio item-stacked-label">
+					<div class="item item-divider"> 
+						Gender
+					</div>
+					<ion-radio name="gender" ng-model="signUpData.gender" ng-value="'M'">Male</ion-radio>
+					<ion-radio name="gender" ng-model="signUpData.gender" ng-value="'F'">Female</ion-radio>
+				</label> 
+
+
+				<!--****************** HUFFADH  -->
+				<label class="item item-radio item-stacked-label">
+					<div class="item item-divider"> 
+						Hafidh
+					</div>
+					<ion-radio ng-model="signUpData.hafidh" ng-value="true">Yes</ion-radio>
+					<ion-radio ng-model="signUpData.hafidh" ng-value="false">No</ion-radio>
+				</label>          
+
+				<!--****************** LOCAL MASJID -->
+				<div class="item item-divider"> 
+					Local Masjid
+				</div>
+				<label class = "item item-input item-select">
+
+					<div class = "input-label">
+						Select
+					</div>
+
+					<select name="masjid" ng-model="signUpData.masjid">
+						<option>IANT</option>
+						<option selected>IACC</option>
+						<option>EPIC</option>
+					</select>
+				</label>
+
+
+				<!--****************** INTERESTS CHECKBOX-->
+				<div class="item item-divider"> 
+					Interests
+				</div>
+				<ul class="list">
+					<li class="item item-checkbox">
+						BasketBall
+						<label class="checkbox">
+							<input type="checkbox" ng-model="signUpData.interests.basketball">
+						</label>
+					</li>
+
+					<li class="item item-checkbox">
+						Football
+						<label class="checkbox">
+							<input type="checkbox" ng-model="signUpData.interests.football">
+						</label>
+					</li>
+
+					<li class="item item-checkbox">
+						Soccer
+						<label class="checkbox">
+							<input type="checkbox" ng-model="signUpData.interests.soccer">
+						</label>
+					</li>
+
+					<li class="item item-checkbox">
+						Badminton
+						<label class="checkbox">
+							<input type="checkbox" ng-model="signUpData.interests.badminton">
+						</label>
+					</li>
+
+				</ul>
+
+
+				<button class="button button-block button-assertive" ng-click="signUp()" style="margin-top:20px"
+                        ng-disabled="signUpForm.$invalid">
+                    
+					Create Account
+				</button>
+
+			</div>
+		</form>
+		
+		
+		
+	</ion-content>
+
+
+</ion-view>
