@@ -1,1 +1,48 @@
 /* Empty. Add your own CSS if you like */
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+.stopfade { 
+   opacity: .5;
+}
+
+body {
+  margin: 0;
+  background: #000; 
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    margin:0 auto;
+    display: block;
+    margin-top: auto;
+    margin-top: 35%;
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.footer{
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+
+@media screen and (max-device-width: 800px) {
+    html {
+         background: url(polina.jpg) #000 no-repeat center center fixed;
+    }
+    #bgvid {
+        display: none;
+    }
+}

@@ -1,4 +1,4 @@
-starter.controller(
+myCtlr.controller(
 	'SignupCtrl', 
 
 	function($scope,AuthService,$state,$ionicPopup) {
@@ -53,9 +53,6 @@ starter.controller(
 			}
 
 		}; 
-
-
-
 
 	} 
 )

@@ -8,7 +8,7 @@ angular.module("myServices").factory(
 		 console.log("Initialize Auth Service");		
 
 		 var userData = {};
-		 var refString = "https://muslimyouthconnect.firebaseio.com/"; 
+		 var refString = "https://fazeelglobaltracker.firebaseio.com/"; 
 		 var ref = new Firebase(refString);  
 		 var Auth =  $firebaseAuth(ref); 
 		 var authData = null;
@@ -194,16 +194,9 @@ angular.module("myServices").factory(
 			 getAuthData	: function()	{ return authData;									}, 
 			 setUserProfile : function(cb)  { setUserProfile(cb);								},
 			 getUserProfile : function() 	{ return userProfile;								},
-			 getMaleUsers   : function(cb)  { getMaleUsers(cb);									},
-			 getFemaleUsers   : function(cb)  { getFemaleUsers(cb);								},
 			 showLoader	    : function()    { showLoader();										}, 
 			 hideLoader	    : function()    { hideLoader();										},
 			 getProfile		: function(uid,cb)  { return getProfile(uid,cb)			    		},
-			 createEvent    : function(data,cb) {  return createEvent(data,cb);					},
-			 getAllEvents   : function(cb)	{ return getAllEvents(cb);							},
-			 updateAttendance   : function(id,ava)	{ return updateAttendance(id,ava);			}
-
-
 		 };
 
 		 return auth;

@@ -11,8 +11,6 @@ var myCtlr = angular.module('starter.controllers', []);
 myCtlr.controller('MainCtrl', function($scope,AuthService) {
 
 	$scope.auth = AuthService;   
-
-
 });
 
 myCtlr.controller('AuthCtrl', function($scope) { 

@@ -73,6 +73,13 @@ var myApp = angular.module('starter', ['ionic', 'starter.controllers','firebase'
 		templateUrl: 'templates/login/login.html',
 		controller : 'LoginCtrl'
 	})
+  
+  // Dashboard state
+		.state('dashboard', {
+		url: '/dashboard', 
+		templateUrl: 'templates/dashboard/dashboard.html',
+		controller : 'DashBoardCtrl'
+	})
 // if none of the above states are matched, use this as the fallback
 	$urlRouterProvider.otherwise('/starter');
   });

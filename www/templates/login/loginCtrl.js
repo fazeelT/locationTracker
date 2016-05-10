@@ -1,4 +1,4 @@
-myControllers.controller(
+myCtlr.controller(
 	'LoginCtrl', 
 
 	function($scope,AuthService,$state) {
@@ -7,8 +7,6 @@ myControllers.controller(
 
 
 		$scope.logInData = {
-			email : "male2@gmail.com",
-			password : "asdf"
 		};
 
 
@@ -21,7 +19,7 @@ myControllers.controller(
 				
 				if(!err){
 					AuthService.setUserProfile(function(){
-						$state.transitionTo('tab.dash',{location:"replace"});
+						$state.transitionTo('dashboard',{location:"replace"});
 						AuthService.hideLoader();
 					}) 
 				}

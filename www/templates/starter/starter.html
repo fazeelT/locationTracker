@@ -1,25 +1,30 @@
 <ion-view   hide-nav-bar="true" >
 	<!-- <ion-header-bar title = "Muslim Youth" />-->
 	<ion-content  class="starter-page" scroll="false">
-		<img src="/img/bg3.jpg"><br><br>
-		<h1 class="HomePageHeader" style="font-family: Gill Sans, Verdana;">Muslim <br> Youth <br> Connect</h1>
+		<video autoplay poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" loop>
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<source src="//demosthenes.info/assets/videos/polina.webm" type="video/webm">
+<source src="//demosthenes.info/assets/videos/polina.mp4" type="video/mp4">
+</video>
+		<img id="iconImage" src="img/icon.png" class="center" alt="">
  
 
-		<div class="buttons-starter">
+		<div class="buttons-starter footer">
 			<div class="row">
-				<div class="col">
+				
 					<button class="button button-block button-assertive" ui-sref="login">
 						login
 					</button>
-				</div>
-				<div class="col">
-					<button class="button button-block button-positive"  ui-sref="signup">
+            </div>
+				<div class="row">
+					<button class="button button-block button-positive "  ui-sref="signup">
 						signup
 					</button>
-				</div>
+            </div>
+				
 
 
 			</div>
-		</div>
+		
 	</ion-content>
 </ion-view>
